@@ -179,7 +179,7 @@ impl Run {
             ],
             &["**/node_modules/**".parse().unwrap()],
             globwalk::WalkType::Files,
-            Settings::default().ignore_nested_workspaces(),
+            Settings::default().ignore_nested_packages(),
         )?;
 
         let mut diagnostics: Vec<BoundariesDiagnostic> = Vec::new();
