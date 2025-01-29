@@ -167,7 +167,6 @@ impl Run {
         unresolved_external_dependencies: Option<&BTreeMap<String, String>>,
         source_map: &SourceMap,
     ) -> Result<Vec<BoundariesDiagnostic>, Error> {
-        eprintln!("checking {}", package_root);
         let files = globwalk::globwalk_with_settings(
             package_root,
             &[
